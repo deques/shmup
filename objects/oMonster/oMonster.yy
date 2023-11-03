@@ -1,18 +1,18 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oGray",
-  "eventList": [],
+  "name": "oMonster",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
     "name": "Monsters",
     "path": "folders/Objects/Monsters.yy",
   },
-  "parentObjectId": {
-    "name": "oMonster",
-    "path": "objects/oMonster/oMonster.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -28,10 +28,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "sGray",
-    "path": "sprites/sGray/sGray.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

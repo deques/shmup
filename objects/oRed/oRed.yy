@@ -2,14 +2,19 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "oRed",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
     "name": "Monsters",
     "path": "folders/Objects/Monsters.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oMonster",
+    "path": "objects/oMonster/oMonster.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

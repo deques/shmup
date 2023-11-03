@@ -53,6 +53,7 @@
     {"id":{"name":"oYellow","path":"objects/oYellow/oYellow.yy",},},
     {"id":{"name":"sGreen","path":"sprites/sGreen/sGreen.yy",},},
     {"id":{"name":"oBlue","path":"objects/oBlue/oBlue.yy",},},
+    {"id":{"name":"oMonster","path":"objects/oMonster/oMonster.yy",},},
     {"id":{"name":"oMonster1","path":"objects/oMonster1/oMonster1.yy",},},
     {"id":{"name":"sGold","path":"sprites/sGold/sGold.yy",},},
     {"id":{"name":"oGray","path":"objects/oGray/oGray.yy",},},
@@ -67,10 +68,10 @@
     {"id":{"name":"sBeam","path":"sprites/sBeam/sBeam.yy",},},
     {"id":{"name":"oMonster3","path":"objects/oMonster3/oMonster3.yy",},},
     {"id":{"name":"sRed","path":"sprites/sRed/sRed.yy",},},
-    {"id":{"name":"rmRoom1","path":"rooms/rmRoom1/rmRoom1.yy",},},
+    {"id":{"name":"rmStage1","path":"rooms/rmStage1/rmStage1.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"rmRoom1","path":"rooms/rmRoom1/rmRoom1.yy",},},
+    {"roomId":{"name":"rmStage1","path":"rooms/rmStage1/rmStage1.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [

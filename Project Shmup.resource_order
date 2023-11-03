@@ -34,6 +34,7 @@
     {"name":"sSingleBeam","order":2,"path":"sprites/sSingleBeam/sSingleBeam.yy",},
     {"name":"oYellow","order":9,"path":"objects/oYellow/oYellow.yy",},
     {"name":"oBlue","order":8,"path":"objects/oBlue/oBlue.yy",},
+    {"name":"oMonster","order":11,"path":"objects/oMonster/oMonster.yy",},
     {"name":"sGold","order":1,"path":"sprites/sGold/sGold.yy",},
     {"name":"oGray","order":5,"path":"objects/oGray/oGray.yy",},
     {"name":"oMonsterBullet","order":2,"path":"objects/oMonsterBullet/oMonsterBullet.yy",},
