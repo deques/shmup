@@ -5,8 +5,7 @@ if (parent == noone)
 
 //var xx = parent.x + lengthdir_x(parent.distance, angle);
 //var yy = parent.y + lengthdir_y(parent.distance, angle);
-var xx = parent.x + h_spd * dcos(dir);
-var yy = parent.y + v_spd * dsin(dir);
-show_debug_message(xx)
+var xx = parent.x + spd * dcos(dir);
+var yy = parent.y + spd * dsin(dir);
 x = xx;
 y = yy;

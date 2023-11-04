@@ -3,7 +3,6 @@
 // Inherit the parent event
 event_inherited();
 
-v_spd = 1;
-h_spd = 1;
-
-dir = ENEMYDIR.DOWN;
+spd = 1;
+dir = DIRS.DOWN;
+shot_cooldown = 10;
