@@ -7,6 +7,8 @@ parent = self;
 shot_cooldown = 0;
 shoo_cooldown_counter = 0;
 can_shoot = false;
+hp = 0;
+
 alarm[0] = 0;
 
 if (instance_exists(oPlayer))

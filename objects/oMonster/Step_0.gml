@@ -9,3 +9,8 @@ var xx = parent.x + spd * dcos(dir);
 var yy = parent.y + spd * dsin(dir);
 x = xx;
 y = yy;
+
+
+if (hp <= 0) {
+	instance_destroy();
+}
