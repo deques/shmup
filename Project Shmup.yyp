@@ -65,6 +65,7 @@
     {"id":{"name":"oMonsterBullet2","path":"objects/oMonsterBullet2/oMonsterBullet2.yy",},},
     {"id":{"name":"sGray","path":"sprites/sGray/sGray.yy",},},
     {"id":{"name":"oMonster2","path":"objects/oMonster2/oMonster2.yy",},},
+    {"id":{"name":"Sequence1","path":"sequences/Sequence1/Sequence1.yy",},},
     {"id":{"name":"sBeam","path":"sprites/sBeam/sBeam.yy",},},
     {"id":{"name":"oMonster3","path":"objects/oMonster3/oMonster3.yy",},},
     {"id":{"name":"sRed","path":"sprites/sRed/sRed.yy",},},

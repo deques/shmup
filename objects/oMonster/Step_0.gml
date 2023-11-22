@@ -11,6 +11,14 @@ x = xx;
 y = yy;
 
 
+// Die if the HP is or lower than 0
 if (hp <= 0) {
 	instance_destroy();
+}
+
+// Only start shooting when visible
+if (x > inside.left and x < inside.right and
+		y > inside.bottom and y < inside.top and
+		can_shoot == false and alarm[0] <= 0) {
+	alarm[0] = shot_cooldown;
 }
