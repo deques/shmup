@@ -7,10 +7,13 @@ event_inherited();
 
 // Shoot
 if (can_shoot) {
+	var num = 4;
+	var num_angle = 360 / num;
+	
 	// Create four bullets at each direction
-	for (var i = 0; i < 4; i++) {
+	for (var i = 0; i < num; i++) {
 		with (instance_create_layer(x, y, global.layers.bullets, oBullet)) {
-			angle = other.shoot_angle + (i * 90);
+			angle = other.shoot_angle + (i * num_angle);
 			spd = 2;
 			image_blend = c_yellow;
 		}
