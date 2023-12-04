@@ -18,7 +18,7 @@ if (hp <= 0) {
 
 // Only start shooting when visible
 if (x > inside.left and x < inside.right and
-		y > inside.bottom and y < inside.top and
+		y > inside.top and y < inside.bottom and
 		can_shoot == false and alarm[0] <= 0) {
 	alarm[0] = shot_cooldown;
 }

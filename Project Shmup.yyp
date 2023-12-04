@@ -59,6 +59,8 @@
     {"id":{"name":"oGray","path":"objects/oGray/oGray.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"oMonsterBullet","path":"objects/oMonsterBullet/oMonsterBullet.yy",},},
+    {"id":{"name":"globals","path":"scripts/globals/globals.yy",},},
+    {"id":{"name":"oHelper","path":"objects/oHelper/oHelper.yy",},},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},},
     {"id":{"name":"enums","path":"scripts/enums/enums.yy",},},
     {"id":{"name":"pico8_invaders_sprites_LARGE","path":"sprites/pico8_invaders_sprites_LARGE/pico8_invaders_sprites_LARGE.yy",},},

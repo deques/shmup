@@ -1,5 +1,6 @@
 /// @description 
 instance_destroy();
 with (other) {
-	hp--;
+	if (other.y > dead_zone)
+		hp--;
 }

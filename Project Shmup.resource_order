@@ -38,6 +38,8 @@
     {"name":"sGold","order":1,"path":"sprites/sGold/sGold.yy",},
     {"name":"oGray","order":5,"path":"objects/oGray/oGray.yy",},
     {"name":"oMonsterBullet","order":2,"path":"objects/oMonsterBullet/oMonsterBullet.yy",},
+    {"name":"globals","order":2,"path":"scripts/globals/globals.yy",},
+    {"name":"oHelper","order":6,"path":"objects/oHelper/oHelper.yy",},
     {"name":"oBullet","order":5,"path":"objects/oBullet/oBullet.yy",},
     {"name":"pico8_invaders_sprites_LARGE","order":4,"path":"sprites/pico8_invaders_sprites_LARGE/pico8_invaders_sprites_LARGE.yy",},
     {"name":"oMonsterBullet2","order":3,"path":"objects/oMonsterBullet2/oMonsterBullet2.yy",},

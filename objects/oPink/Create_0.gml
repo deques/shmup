@@ -17,3 +17,4 @@ min_shoot_angle = shoot_angle - minMax;
 max_shoot_angle = shoot_angle + minMax;
 
 step = 10;
+hp = 2;

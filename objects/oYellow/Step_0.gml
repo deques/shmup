@@ -1,7 +1,3 @@
-/// @description 
-
-
-
 // Inherit the parent event
 event_inherited();
 
@@ -25,3 +21,5 @@ if (can_shoot) {
 	if (shoot_angle >= 360)
 		shoot_angle = 0;
 }
+
+y += move_speed;
