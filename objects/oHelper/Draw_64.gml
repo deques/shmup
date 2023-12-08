@@ -11,4 +11,5 @@ if (global.DEBUG) {
 	draw_set_alpha(0.5);
 	draw_rectangle(0, 0, width, global.dead_zone * scale, 0);
 	draw_set_alpha(1);
+	
 }

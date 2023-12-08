@@ -16,6 +16,16 @@ if (hp <= 0) {
 	instance_destroy();
 }
 
+// Getting hit
+if (hit == true) {
+	iFrame -= global.timer;
+	
+	if (iFrame <= 0) {
+		hit = false;	
+	}
+}
+
+
 // Only start shooting when visible
 if (x > inside.left and x < inside.right and
 		y > inside.top and y < inside.bottom and

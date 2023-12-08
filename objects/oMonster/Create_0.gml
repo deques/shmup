@@ -13,6 +13,11 @@ move_speed = 0;
 dead_zone = global.dead_zone;														// Enemies can't be hurt
 cease_fire_zone = room_height - global.cease_fire_zone; // Enemies stop shooting 
 
+// Getting hit
+hit = false;
+iFrameTime = 0.5;
+iFrame = 0;
+
 alarm[0] = 0;
 
 if (instance_exists(oPlayer))
