@@ -4,9 +4,10 @@ event_inherited();
 // Shoot
 if (can_shoot) {
 	var bullet = instance_create_layer(x, y, global.layers.bullets, oBullet);
-	bullet.angle = point_direction(x, y, player.x, player.y);
+	bullet.angle = point_direction(x, y, oPlayer.x, oPlayer.y);
 	bullet.spd = 2;
 	can_shoot = false;
+	bullet.shot_from = self.id;
 }
 
 

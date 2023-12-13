@@ -3,17 +3,32 @@
 if (parent == noone)
 	parent = self;
 
+#region Movement
 //var xx = parent.x + lengthdir_x(parent.distance, angle);
 //var yy = parent.y + lengthdir_y(parent.distance, angle);
 var xx = parent.x + spd * dcos(dir);
 var yy = parent.y + spd * dsin(dir);
 x = xx;
 y = yy;
+#endregion
 
-
+#region Death
 // Die if the HP is or lower than 0
 if (hp <= 0) {
+	can_shoot = false;
+	shot_cooldown = 0;
+	
 	instance_destroy();
+	/*for (var i = 0; i < instance_number(oBullet); i++) {
+		var inst_bullet = instance_find(oBullet, i);
+		
+		with (inst_bullet) {
+			if (shot_from == other.id) {
+				image_blend = c_red;
+				//instance_destroy(inst_bullet.id);
+			}
+		}
+	}*/
 }
 
 // Getting hit
@@ -24,6 +39,7 @@ if (hit == true) {
 		hit = false;	
 	}
 }
+#endregion
 
 // Only start shooting when visible
 if (x > inside.left and x < inside.right and

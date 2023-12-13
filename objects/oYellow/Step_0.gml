@@ -12,6 +12,7 @@ if (can_shoot) {
 			angle = other.shoot_angle + (i * num_angle);
 			spd = 2;
 			image_blend = c_yellow;
+			shot_from = self.id;
 		}
 	}
 	

@@ -13,6 +13,7 @@ if (can_shoot) {
 		angle = other.shoot_angle;
 		spd = 1.5;
 		image_blend = c_dkgray;
+		shot_from = self.id;
 	}
 	
 	can_shoot = false;

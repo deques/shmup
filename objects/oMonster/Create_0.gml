@@ -9,6 +9,7 @@ shoo_cooldown_counter = 0;
 can_shoot = false;
 hp = 1;
 move_speed = 0;
+medal = false;
 
 dead_zone = global.dead_zone;														// Enemies can't be hurt
 cease_fire_zone = room_height - global.cease_fire_zone; // Enemies stop shooting 
