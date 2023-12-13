@@ -12,4 +12,13 @@ if (global.DEBUG) {
 	draw_rectangle(0, 0, width, global.dead_zone * scale, 0);
 	draw_set_alpha(1);
 	
+	var bullets;
+	
+	// Count enmey bullets
+	bullets = instance_number(oBullet);
+	draw_text(10, 100, "Bullet count: " + string(bullets));
+	
+	// Count player bullets
+	bullets = instance_number(oBeam);
+	draw_text(10, 120, "Bullet count: " + string(bullets));
 }

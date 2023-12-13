@@ -25,7 +25,6 @@ if (hit == true) {
 	}
 }
 
-
 // Only start shooting when visible
 if (x > inside.left and x < inside.right and
 		y > inside.top and y < inside.bottom and

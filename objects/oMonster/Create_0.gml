@@ -15,7 +15,7 @@ cease_fire_zone = room_height - global.cease_fire_zone; // Enemies stop shooting
 
 // Getting hit
 hit = false;
-iFrameTime = 0.5;
+iFrameTime = 0.2;
 iFrame = 0;
 
 alarm[0] = 0;
