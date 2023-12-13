@@ -12,7 +12,7 @@ x = xx;
 y = yy;
 
 // Destroy bullet when the parent monster is dead
-if (!instance_exists(shot_from)) {
+/*if (!instance_exists(shot_from)) {
 	instance_create_layer(x, y, "Bullets", oCoin);
 	instance_destroy();
-}
+}*/

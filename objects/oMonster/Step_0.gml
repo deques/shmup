@@ -19,6 +19,12 @@ if (hp <= 0) {
 	shot_cooldown = 0;
 	
 	instance_destroy();
+	with (oBullet) {
+		if (shot_from == other.id) {
+			instance_create_layer(x, y, "Bullets", oCoin);
+			instance_destroy();	
+		}
+	}
 	/*for (var i = 0; i < instance_number(oBullet); i++) {
 		var inst_bullet = instance_find(oBullet, i);
 		
