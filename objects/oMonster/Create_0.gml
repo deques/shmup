@@ -18,6 +18,10 @@ cease_fire_zone = room_height - global.cease_fire_zone; // Enemies stop shooting
 hit = false;
 iFrameTime = 0.2;
 iFrame = 0;
+// Hit flash
+flashColor = c_white;
+flashTimer = 0;
+flashTime = 1 / (iFrameTime / global.timer);
 
 alarm[0] = 0;
 

@@ -1,4 +1,4 @@
-/// @description Monster movement logic
+/// @description 
 
 if (parent == noone)
 	parent = self;
@@ -25,21 +25,12 @@ if (hp <= 0) {
 			instance_destroy();	
 		}
 	}
-	/*for (var i = 0; i < instance_number(oBullet); i++) {
-		var inst_bullet = instance_find(oBullet, i);
-		
-		with (inst_bullet) {
-			if (shot_from == other.id) {
-				image_blend = c_red;
-				//instance_destroy(inst_bullet.id);
-			}
-		}
-	}*/
 }
 
 // Getting hit
 if (hit == true) {
 	iFrame -= global.timer;
+	flashTimer -= flashTime;
 	
 	if (iFrame <= 0) {
 		hit = false;	

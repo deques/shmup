@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Monsters",
-    "path": "folders/Objects/Monsters.yy",
+    "name": "Old",
+    "path": "folders/Objects/Monsters/Old.yy",
   },
   "parentObjectId": null,
   "persistent": false,

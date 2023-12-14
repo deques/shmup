@@ -17,6 +17,7 @@
     {"name":"Monsters","order":6,"path":"folders/Sprites/Monsters.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"Old","order":12,"path":"folders/Objects/Monsters/Old.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"sYellow","order":4,"path":"sprites/sYellow/sYellow.yy",},

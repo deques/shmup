@@ -15,5 +15,5 @@ image_yscale = size;
 
 
 if (global.DEBUG == true) {
-	hp = 1;	
+	hp = 10;	
 }
