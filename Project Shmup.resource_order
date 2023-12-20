@@ -6,6 +6,7 @@
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Objects","order":9,"path":"folders/Objects.yy",},
     {"name":"Monsters","order":4,"path":"folders/Objects/Monsters.yy",},
+    {"name":"Old","order":12,"path":"folders/Objects/Monsters/Old.yy",},
     {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
     {"name":"Paths","order":4,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":10,"path":"folders/Rooms.yy",},
@@ -17,7 +18,6 @@
     {"name":"Monsters","order":6,"path":"folders/Sprites/Monsters.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"Old","order":12,"path":"folders/Objects/Monsters/Old.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"sYellow","order":4,"path":"sprites/sYellow/sYellow.yy",},
@@ -46,6 +46,7 @@
     {"name":"oBullet","order":5,"path":"objects/oBullet/oBullet.yy",},
     {"name":"pico8_invaders_sprites_LARGE","order":4,"path":"sprites/pico8_invaders_sprites_LARGE/pico8_invaders_sprites_LARGE.yy",},
     {"name":"oMonsterBullet2","order":3,"path":"objects/oMonsterBullet2/oMonsterBullet2.yy",},
+    {"name":"oPathTest","order":8,"path":"objects/oPathTest/oPathTest.yy",},
     {"name":"sGray","order":6,"path":"sprites/sGray/sGray.yy",},
     {"name":"oMonster2","order":1,"path":"objects/oMonster2/oMonster2.yy",},
     {"name":"sBeam","order":1,"path":"sprites/sBeam/sBeam.yy",},
