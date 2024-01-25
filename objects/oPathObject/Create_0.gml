@@ -1,16 +1,14 @@
 /// @description 
-
 var width = view_wport[0];
 var height = view_hport[0];
 scale = width / room_width;
 
-dsPoints = ds_list_create();
 follow = false;
 
 pointPos = 0;
 spd = 2;
 
-xPos = -1;
-yPos = -1;
+xPos = x;
+yPos = y;
 
 lastDistance = 100000;
