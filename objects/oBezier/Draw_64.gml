@@ -10,13 +10,6 @@ var draw_curve = function() {
 	}
 }
 
-var color = make_color_rgb(245, 255, 236);
-draw_set_color(color);
-
-
-dPoint(p0);
-dPoint(p1);
-dPoint(p2);
 
 if (ready == true) {
 	draw_curve();
