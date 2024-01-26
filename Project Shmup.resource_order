@@ -8,6 +8,7 @@
     {"name":"Monsters","order":4,"path":"folders/Objects/Monsters.yy",},
     {"name":"Old","order":12,"path":"folders/Objects/Monsters/Old.yy",},
     {"name":"Path","order":9,"path":"folders/Objects/Path.yy",},
+    {"name":"BezierTest","order":3,"path":"folders/Objects/Path/BezierTest.yy",},
     {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
     {"name":"Paths","order":4,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":10,"path":"folders/Rooms.yy",},
@@ -19,7 +20,6 @@
     {"name":"Monsters","order":6,"path":"folders/Sprites/Monsters.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"BezierTest","order":3,"path":"folders/Objects/Path/BezierTest.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"sYellow","order":4,"path":"sprites/sYellow/sYellow.yy",},
