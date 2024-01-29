@@ -8,3 +8,5 @@ if (array_length(p0) > 0 && array_length(p1) > 0 && array_length(p2) > 0) {
 	}
 	ready = true;
 }
+
+global.step += 0.01;

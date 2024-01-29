@@ -16,3 +16,7 @@ quadraticBezier = function(p0, p1, p2, t) {
 	array_push(curve, [_x, _y]);
 }
 
+aDot = noone;
+bDot = noone;
+
+global.step = 0;

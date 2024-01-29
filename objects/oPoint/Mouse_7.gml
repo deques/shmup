@@ -12,5 +12,10 @@ if (instance_exists(oBezier)) {
 		else if (p == "P2") {
 			oBezier.p2 = [mouse_x, mouse_y];
 		}
+		
+		oBezier.aDot.aPoint = oBezier.p0;
+		oBezier.aDot.bPoint = oBezier.p1;
+		oBezier.bDot.aPoint = oBezier.p1;
+		oBezier.bDot.bPoint = oBezier.p2;
 	}
 }
