@@ -20,6 +20,7 @@
     {"name":"Monsters","order":6,"path":"folders/Sprites/Monsters.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"Player","order":11,"path":"folders/Objects/Player.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"sYellow","order":4,"path":"sprites/sYellow/sYellow.yy",},
@@ -34,6 +35,7 @@
     {"name":"oGold","order":4,"path":"objects/oGold/oGold.yy",},
     {"name":"sCircle","order":3,"path":"sprites/sCircle/sCircle.yy",},
     {"name":"sPink","order":5,"path":"sprites/sPink/sPink.yy",},
+    {"name":"oPlayer","order":1,"path":"objects/oPlayer/oPlayer.yy",},
     {"name":"oPink","order":10,"path":"objects/oPink/oPink.yy",},
     {"name":"oMovePoint","order":2,"path":"objects/oMovePoint/oMovePoint.yy",},
     {"name":"sPoint","order":8,"path":"sprites/sPoint/sPoint.yy",},

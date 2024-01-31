@@ -11,3 +11,8 @@ global.layers = {
 	enemy :		"Enemy",
 	bullets :	"Bullets"
 }
+
+enum OPTION_MODE {
+	STANDARD,
+	CIRCLE
+}

@@ -31,6 +31,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Monsters","folderPath":"folders/Sprites/Monsters.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Objects/Player.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
@@ -45,6 +46,7 @@
     {"id":{"name":"oRed","path":"objects/oRed/oRed.yy",},},
     {"id":{"name":"sDarkGreen","path":"sprites/sDarkGreen/sDarkGreen.yy",},},
     {"id":{"name":"rmBezier","path":"rooms/rmBezier/rmBezier.yy",},},
+    {"id":{"name":"oOption","path":"objects/oOption/oOption.yy",},},
     {"id":{"name":"oCoin","path":"objects/oCoin/oCoin.yy",},},
     {"id":{"name":"oBeam","path":"objects/oBeam/oBeam.yy",},},
     {"id":{"name":"sBlue","path":"sprites/sBlue/sBlue.yy",},},
@@ -88,8 +90,8 @@
     {"id":{"name":"rmStage1","path":"rooms/rmStage1/rmStage1.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"rmBezier","path":"rooms/rmBezier/rmBezier.yy",},},
     {"roomId":{"name":"rmStage1","path":"rooms/rmStage1/rmStage1.yy",},},
+    {"roomId":{"name":"rmBezier","path":"rooms/rmBezier/rmBezier.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
