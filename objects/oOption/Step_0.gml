@@ -31,4 +31,19 @@ if (mode == OPTION_MODE.STANDARD) {
 	y = lerp(y, parent.y + _y, option_speed)
 	//x = parent.x + _x;
 	//y = parent.y + _y;
+} else if (mode == OPTION_MODE.CIRCLE) {
+	var dist = 20;
+	angle += 1.5;
+	for (var i = 0; i < 4; i++) {
+		_x = lengthdir_x(dist, angle);
+		_y = lengthdir_y(dist, angle);
+		
+		option_speed = 0.2;
+		x = lerp(x, parent.x + _x, option_speed)
+		y = lerp(y, parent.y + _y, option_speed)
+		
+		
+		//var xx = parent.x + lengthdir_x(parent.distance, angle);
+		//var yy = parent.y + lengthdir_y(parent.distance, angle);*/
+	}
 }
