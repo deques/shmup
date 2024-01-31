@@ -4,6 +4,7 @@ var _right = keyboard_check(vk_right);
 var _up = keyboard_check(vk_up);
 var _down = keyboard_check(vk_down);
 var _shoot = keyboard_check(ord("X"));
+var _mode_change = keyboard_check_pressed(ord("C"));
 var _weapon_level = keyboard_check_pressed(ord("0")) - keyboard_check_pressed(ord("9"))
 var _move_h = _right - _left;
 var _move_v = _down - _up;
@@ -39,6 +40,14 @@ if (_shoot and can_shoot = true) {
 	
 	can_shoot = false;
 	alarm[0] = 10;
+}
+
+if (_mode_change) {
+	oOption.mode++;
+	if (oOption.mode == OPTION_MODE.NUM)
+		oOption.mode = 0;
+		
+	option_mode = oOption.mode;
 }
 #endregion
 

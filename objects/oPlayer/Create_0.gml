@@ -14,14 +14,15 @@ weapon_level = 4;
 // Create options
 num_options = 4;
 
+option_mode = noone;
 options = ds_list_create();
 
 for (var i = 0; i < num_options; i++) {
-	option = instance_create_layer(x, y, global.layers.player, oOption);
+	var option = instance_create_layer(x, y, global.layers.player, oOption);
 	option.parent = self;
 	option.option_id = (i + 1);
 	option.mode = OPTION_MODE.CIRCLE;
-	
+	option_mode = option.mode;
 	if (option.mode == OPTION_MODE.CIRCLE) {
 		option.angle = (i * 90);	
 	}

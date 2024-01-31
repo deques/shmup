@@ -14,5 +14,6 @@ global.layers = {
 
 enum OPTION_MODE {
 	STANDARD,
-	CIRCLE
+	CIRCLE,
+	NUM
 }

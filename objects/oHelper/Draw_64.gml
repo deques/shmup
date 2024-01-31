@@ -23,9 +23,9 @@ if (global.DEBUG) {
 	draw_text(10, 120, "Bullet count: " + string(bullets));
 	
 	// Option mode
-	if (oPlayer.option.mode == OPTION_MODE.STANDARD) {
+	if (oPlayer.option_mode == OPTION_MODE.STANDARD) {
 		mode = "Standard";
-	} else if (oPlayer.option.mode == OPTION_MODE.CIRCLE) {
+	} else if (oPlayer.option_mode == OPTION_MODE.CIRCLE) {
 		mode = "Circle";
 	}
 	
