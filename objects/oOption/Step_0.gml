@@ -47,3 +47,12 @@ if (mode == OPTION_MODE.STANDARD) {
 		//var yy = parent.y + lengthdir_y(parent.distance, angle);*/
 	}
 }
+
+// Shoot bullets
+if (shoot == true) {
+	_angle = 0;
+	_x_dist = 0;
+	_y_dist = 0;
+	create_bullets(_angle, _x_dist, _y_dist);
+	shoot = false;
+}

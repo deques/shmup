@@ -4,11 +4,6 @@ function create_bullets(_angle, _x_dist, _y_dist) {
 		dir = DIRS.UP + _angle;
 		image__angle += _angle;
 	}
-	
-	with (instance_create_layer(x + _x_dist, y + _y_dist, "Player", oBeam))	{
-		dir = DIRS.UP - _angle;
-		image__angle -= _angle;
-	}
 }
 
 // Bullet level
@@ -18,7 +13,7 @@ function player_shoot() {
 	
 	// Level 1
 	_angle = 0;
-	_x_dist = 4.5;
+	_x_dist = 0;
 	_y_dist = 0;
 	create_bullets(_angle, _x_dist, _y_dist);
 	

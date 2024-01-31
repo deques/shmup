@@ -9,7 +9,7 @@ dir = 0;
 
 can_shoot = true;
 
-weapon_level = 4;
+weapon_level = 1;
 
 // Create options
 num_options = 4;
