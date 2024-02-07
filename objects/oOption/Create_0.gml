@@ -15,6 +15,9 @@ p0 = noone;
 p1 = noone;
 p2 = noone;
 
+sword_timer = 0;
+dir = 45;
+
 function reset_t () {
 	state_change_timer = 0;
 	p0 = noone;
