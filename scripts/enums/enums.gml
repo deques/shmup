@@ -17,3 +17,9 @@ enum OPTION_MODE {
 	CIRCLE,
 	NUM
 }
+
+enum MODE_STATE {
+		IDLE,
+		CHANGE,
+		NUM
+}

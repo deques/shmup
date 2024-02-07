@@ -12,6 +12,22 @@ var _move_v = _down - _up;
 if (_weapon_level != 0)
 	weapon_level += _weapon_level;
 
+function change_mode() {
+	randomize();
+	ds_list_shuffle(options)
+	for (var i = 0; i < ds_list_size(options); i++) {
+		option = options[| i];
+		option.option_id = (i + 1);
+	}
+	
+	oOption.mode++;
+	if (oOption.mode == OPTION_MODE.NUM)
+		oOption.mode = 0;
+	
+	oOption.state = MODE_STATE.CHANGE;
+	option_mode = oOption.mode;
+}
+
 hsp = 0;
 vsp = 0;
 
@@ -43,12 +59,8 @@ if (_shoot and can_shoot = true) {
 	alarm[0] = 10;
 }
 
-if (_mode_change) {
-	oOption.mode++;
-	if (oOption.mode == OPTION_MODE.NUM)
-		oOption.mode = 0;
-		
-	option_mode = oOption.mode;
+if (_mode_change) {	
+	change_mode();
 }
 #endregion
 

@@ -27,8 +27,6 @@ if (mode == OPTION_MODE.STANDARD) {
 	}
 	
 	option_speed = 0.2;
-	x = lerp(x, parent.x + _x, option_speed)
-	y = lerp(y, parent.y + _y, option_speed)
 	//x = parent.x + _x;
 	//y = parent.y + _y;
 } else if (mode == OPTION_MODE.CIRCLE) {
@@ -39,14 +37,35 @@ if (mode == OPTION_MODE.STANDARD) {
 		_y = lengthdir_y(dist, angle);
 		
 		option_speed = 0.2;
-		x = lerp(x, parent.x + _x, option_speed)
-		y = lerp(y, parent.y + _y, option_speed)
-		
-		
-		//var xx = parent.x + lengthdir_x(parent.distance, angle);
-		//var yy = parent.y + lengthdir_y(parent.distance, angle);*/
 	}
 }
+
+#region Smooth option moode change
+if (state == MODE_STATE.IDLE) {
+	x = lerp(x, parent.x + _x, option_speed);
+	y = lerp(y, parent.y + _y, option_speed);
+} else if (state == MODE_STATE.CHANGE) {
+	t = state_change_timer;
+	
+		p0 = [x, y];
+		p2 = [parent.x + _x, parent.y + _y];
+	if (t == 0) {
+		p1 = [random_range(x, parent.x + _x), random_range(y, parent.y + _y)];
+	}
+	
+	quadraticBezier(p0, p1, p2, t);
+	x = lerp(x, _x, option_speed);
+	y = lerp(y, _y, option_speed);
+	
+	
+	state_change_timer += state_change_time;
+
+	if (t >= 1) {
+		state = MODE_STATE.IDLE;
+		reset_t();
+	}
+}
+#endregion
 
 // Shoot bullets
 if (shoot == true) {
