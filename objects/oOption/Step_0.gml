@@ -2,7 +2,12 @@
 
 if (parent == noone)
 	return;
-	
+
+// Test debuging
+var _id = global.options[| option_id - 1].id;
+
+
+#region Option movement
 if (mode == OPTION_MODE.STANDARD) {
 	if (option_id == 1) {
 		var dist = 10;
@@ -67,8 +72,9 @@ if (mode == OPTION_MODE.STANDARD) {
 		sword_timer = 0;
 	}
 }
+#endregion
 
-#region Smooth option moode change
+#region Smooth option mode change
 if (state == MODE_STATE.IDLE) {
 	x = lerp(x, parent.x + _x, option_speed);
 	y = lerp(y, parent.y + _y, option_speed);
@@ -101,3 +107,7 @@ if (shoot == true) {
 	create_bullets(_angle, _x_dist, _y_dist);
 	shoot = false;
 }
+
+#region Create trail
+instance_create_layer(x, y, global.layers.player, oObjectTrail);
+#endregion

@@ -15,7 +15,7 @@ weapon_level = 1;
 num_options = 4;
 
 option_mode = noone;
-options = ds_list_create();
+global.options = ds_list_create();
 
 for (var i = 0; i < num_options; i++) {
 	var option = instance_create_layer(x, y, global.layers.player, oOption);
@@ -27,5 +27,5 @@ for (var i = 0; i < num_options; i++) {
 		option.angle = (i * 90);	
 	}
 	
-	ds_list_add(options, option);
+	ds_list_add(global.options, option);
 }

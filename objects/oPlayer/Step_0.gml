@@ -14,9 +14,9 @@ if (_weapon_level != 0)
 
 function change_mode() {
 	randomize();
-	ds_list_shuffle(options)
-	for (var i = 0; i < ds_list_size(options); i++) {
-		option = options[| i];
+	ds_list_shuffle(global.options)
+	for (var i = 0; i < ds_list_size(global.options); i++) {
+		option = global.options[| i];
 		option.option_id = (i + 1);
 	}
 	

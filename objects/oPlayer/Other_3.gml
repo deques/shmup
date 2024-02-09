@@ -1,4 +1,4 @@
 /// @description 
 
 
-ds_list_destroy(options);
+ds_list_destroy(global.options);

@@ -24,3 +24,4 @@ function reset_t () {
 	p1 = noone;
 	p2 = noone;	
 }
+
