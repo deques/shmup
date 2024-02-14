@@ -27,6 +27,10 @@ if (global.DEBUG) {
 		mode = "Standard";
 	} else if (oPlayer.option_mode == OPTION_MODE.CIRCLE) {
 		mode = "Circle";
+	} else if (oPlayer.option_mode == OPTION_MODE.SWORD) {
+		mode = "Sword";
+	} else if (oPlayer.option_mode == OPTION_MODE.LASER) {
+		mode = "Laser";
 	}
 	
 	draw_text(10, 140, "Option mode: " + mode);

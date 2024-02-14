@@ -52,7 +52,11 @@ y = clamp(y + vsp, 0 + 10, room_height - 10);
 
 #region Player actions
 if (_shoot and can_shoot = true) {
-	player_shoot();
+	_angle = DIRS.UP;
+	_x_dist = 0;
+	_y_dist = 0
+	create_bullets(_angle);
+	//player_shoot();
 	oOption.shoot = true;
 	
 	can_shoot = false;

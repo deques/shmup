@@ -9,6 +9,7 @@ var _id = global.options[| option_id - 1].id;
 
 #region Option movement
 if (mode == OPTION_MODE.STANDARD) {
+	image_index = 0;
 	if (option_id == 1) {
 		var dist = 10;
 		_x = lengthdir_x(dist, DIRS.LEFT);
@@ -21,21 +22,22 @@ if (mode == OPTION_MODE.STANDARD) {
 		
 	} else if (option_id == 3) {
 		var dist = 20;
-		_x = lengthdir_x(dist, DIRS.LEFT - 10);
-		_y = lengthdir_y(dist, DIRS.LEFT - 10);
+		_x = lengthdir_x(dist, DIRS.RIGHT - 10);
+		_y = lengthdir_y(dist, DIRS.RIGHT - 10);
 		
 	} else if (option_id == 4) {
 		var dist = 20;
-		_x = lengthdir_x(dist, DIRS.RIGHT + 10);
-		_y = lengthdir_y(dist, DIRS.RIGHT + 10);
+		_x = lengthdir_x(dist, DIRS.LEFT + 10);
+		_y = lengthdir_y(dist, DIRS.LEFT + 10);
 		
 	}
 	
 	option_speed = 0.2;
 	
 } else if (mode == OPTION_MODE.CIRCLE) {
+	image_index = 1;
 	var dist = 20;
-	angle += 1.5;
+	angle += 7;
 	for (var i = 0; i < 4; i++) {
 		_x = lengthdir_x(dist, angle);
 		_y = lengthdir_y(dist, angle);
@@ -43,6 +45,7 @@ if (mode == OPTION_MODE.STANDARD) {
 		option_speed = 0.2;
 	}
 } else if (mode == OPTION_MODE.SWORD) {
+	image_index = 1;
 	var dist;
 	if (option_id == 1) {
 		dist = 10;
@@ -71,7 +74,28 @@ if (mode == OPTION_MODE.STANDARD) {
 		
 		sword_timer = 0;
 	}
+} else if (mode == OPTION_MODE.LASER) {
+	image_index = 0;
+	var dist;
+	if (option_id == 1) {
+		dist = 35;
+		_x = lengthdir_x(dist, 90)
+		_y = lengthdir_y(dist, 90)
+	} else if (option_id == 2) {
+		dist = 15;
+		_x = lengthdir_x(dist, 90)
+		_y = lengthdir_y(dist, 90)
+	} else if (option_id == 3) {
+		dist = 20;
+		_x = lengthdir_x(dist, 70)
+		_y = lengthdir_y(dist, 70)
+	}else if (option_id == 4) {
+		dist = 20;
+		_x = lengthdir_x(dist, 110)
+		_y = lengthdir_y(dist, 110)
+	}
 }
+
 #endregion
 
 #region Smooth option mode change
@@ -101,13 +125,13 @@ if (state == MODE_STATE.IDLE) {
 
 // Shoot bullets
 if (shoot == true) {
-	_angle = 0;
-	_x_dist = 0;
-	_y_dist = 0;
-	create_bullets(_angle, _x_dist, _y_dist);
+	_angle = DIRS.UP;
+	create_bullets(_angle);
 	shoot = false;
 }
 
 #region Create trail
-instance_create_layer(x, y, global.layers.player, oObjectTrail);
+trail = instance_create_layer(x, y, global.layers.player, oObjectTrail)
+trail.image_index = image_index;
+
 #endregion

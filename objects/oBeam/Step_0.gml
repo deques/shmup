@@ -1,6 +1,9 @@
 /// @description 
 
 #region bullet movement
-x += lengthdir_x(spd, dir);
-y += lengthdir_y(spd, dir);
+var _x = lengthdir_x(spd, dir);
+var _y = lengthdir_y(spd, dir);
+
+x += _x;
+y -= _y;
 #endregion

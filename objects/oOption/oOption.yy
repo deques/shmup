@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sPoint",
-    "path": "sprites/sPoint/sPoint.yy",
+    "name": "sOption",
+    "path": "sprites/sOption/sOption.yy",
   },
   "spriteMaskId": null,
   "visible": true,

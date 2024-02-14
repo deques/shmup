@@ -1,5 +1,6 @@
 /// @description 
-
+image_speed = 0;
+image_index = 1;
 parent = noone;
 option_id = noone;
 mode = noone;
