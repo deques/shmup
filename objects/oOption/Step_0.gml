@@ -9,6 +9,7 @@ var _id = global.options[| option_id - 1].id;
 
 #region Option movement
 if (mode == OPTION_MODE.STANDARD) {
+	image_angle = 0;
 	image_index = 0;
 	if (option_id == 1) {
 		var dist = 10;
@@ -77,6 +78,7 @@ if (mode == OPTION_MODE.STANDARD) {
 } else if (mode == OPTION_MODE.LASER) {
 	image_index = 0;
 	var dist;
+	var option1 = global.options[| 0].id;
 	if (option_id == 1) {
 		dist = 35;
 		_x = lengthdir_x(dist, 90)
@@ -89,10 +91,13 @@ if (mode == OPTION_MODE.STANDARD) {
 		dist = 20;
 		_x = lengthdir_x(dist, 70)
 		_y = lengthdir_y(dist, 70)
-	}else if (option_id == 4) {
+		
+		image_angle = point_direction(x, y, option1.x, option1.y) - 90;
+	} else if (option_id == 4) {
 		dist = 20;
 		_x = lengthdir_x(dist, 110)
 		_y = lengthdir_y(dist, 110)
+		image_angle = point_direction(x, y, option1.x, option1.y) - 90;
 	}
 }
 
@@ -123,15 +128,22 @@ if (state == MODE_STATE.IDLE) {
 }
 #endregion
 
-// Shoot bullets
+#region Shoot bullets
 if (shoot == true) {
-	_angle = DIRS.UP;
-	create_bullets(_angle);
+	var _angle = DIRS.UP;
+	if (mode == OPTION_MODE.LASER and (option_id == 3 or option_id == 4)) {
+		_angle = point_direction(x, y, option1.x, option1.y);
+		var _mirror_angle = 90 + (90 - _angle);
+		_angle = _mirror_angle;
+	}
+	create_bullets(_angle, self.id);
 	shoot = false;
 }
+#endregion
 
 #region Create trail
-trail = instance_create_layer(x, y, global.layers.player, oObjectTrail)
-trail.image_index = image_index;
-
+if (mode != OPTION_MODE.LASER) {
+	trail = instance_create_layer(x, y, global.layers.player, oObjectTrail)
+	trail.image_index = image_index;
+}
 #endregion

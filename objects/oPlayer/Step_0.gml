@@ -55,7 +55,7 @@ if (_shoot and can_shoot = true) {
 	_angle = DIRS.UP;
 	_x_dist = 0;
 	_y_dist = 0
-	create_bullets(_angle);
+	create_bullets(_angle, self.id);
 	//player_shoot();
 	oOption.shoot = true;
 	
