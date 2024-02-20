@@ -37,6 +37,7 @@ if (mode == OPTION_MODE.STANDARD) {
 	
 } else if (mode == OPTION_MODE.CIRCLE) {
 	image_index = 1;
+	shoot = false;
 	var dist = 20;
 	angle += 7;
 	for (var i = 0; i < 4; i++) {
@@ -47,6 +48,7 @@ if (mode == OPTION_MODE.STANDARD) {
 	}
 } else if (mode == OPTION_MODE.SWORD) {
 	image_index = 1;
+	shoot = false;
 	var dist;
 	if (option_id == 1) {
 		dist = 10;
@@ -114,7 +116,7 @@ if (state == MODE_STATE.IDLE) {
 		p1 = [random_range(x, parent.x + _x), random_range(y, parent.y + _y)];
 	}
 	
-	quadraticBezier(p0, p1, p2, state_change_timer);
+	quadratic_Bezier(p0, p1, p2, state_change_timer);
 	x = lerp(x, _x, option_speed);
 	y = lerp(y, _y, option_speed);
 	
