@@ -110,6 +110,11 @@ if (state == MODE_STATE.IDLE) {
 	x = lerp(x, parent.x + _x, option_speed);
 	y = lerp(y, parent.y + _y, option_speed);
 } else if (state == MODE_STATE.CHANGE) {
+	
+	if (mode == OPTION_MODE.CIRCLE) {
+		angle = option_id * 90;
+	}
+	
 	p0 = [x, y];
 	p2 = [parent.x + _x, parent.y + _y];
 	if (state_change_timer == 0) {
@@ -119,7 +124,6 @@ if (state == MODE_STATE.IDLE) {
 	quadratic_Bezier(p0, p1, p2, state_change_timer);
 	x = lerp(x, _x, option_speed);
 	y = lerp(y, _y, option_speed);
-	
 	
 	state_change_timer += state_change_time;
 

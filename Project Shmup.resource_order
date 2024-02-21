@@ -55,6 +55,7 @@
     {"name":"oHelper","order":6,"path":"objects/oHelper/oHelper.yy",},
     {"name":"sCoin","order":7,"path":"sprites/sCoin/sCoin.yy",},
     {"name":"oBullet","order":5,"path":"objects/oBullet/oBullet.yy",},
+    {"name":"sLaser","order":12,"path":"sprites/sLaser/sLaser.yy",},
     {"name":"pico8_invaders_sprites_LARGE","order":4,"path":"sprites/pico8_invaders_sprites_LARGE/pico8_invaders_sprites_LARGE.yy",},
     {"name":"oMonsterBullet2","order":3,"path":"objects/oMonsterBullet2/oMonsterBullet2.yy",},
     {"name":"spr_grid","order":10,"path":"sprites/spr_grid/spr_grid.yy",},

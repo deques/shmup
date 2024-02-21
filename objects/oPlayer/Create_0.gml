@@ -24,7 +24,7 @@ for (var i = 0; i < num_options; i++) {
 	option.mode = OPTION_MODE.CIRCLE;
 	option_mode = option.mode;
 	if (option.mode == OPTION_MODE.CIRCLE) {
-		option.angle = (i * 90);	
+		option.angle = (i * 90);
 	}
 	
 	ds_list_add(global.options, option);

@@ -17,6 +17,11 @@ if (shoot_laser == true) {
 			
 		_end_x = x;
 		_end_y = y - 900;
+		if (collision_point(_end_x, _end_y, oMonster, false, true)) {
+			_end_x = other.x;
+			_end_y = other.y;
+		}
+		
 	} else if (option_id == 2 or option_id == 3 or option_id == 4) {
 		_shoot_laser = true;
 		endPoint = global.options[| 0].id;
@@ -28,5 +33,5 @@ if (shoot_laser == true) {
 		option_id = 1;
 		
 	if (_shoot_laser == true)
-		create_laser(self, [_end_x, _end_y]);
+		create_laser(option_id, self, [_end_x, _end_y]);
 }
