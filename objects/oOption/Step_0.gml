@@ -135,7 +135,7 @@ if (state == MODE_STATE.IDLE) {
 #endregion
 
 #region Shoot bullets
-if (shoot == true) {
+if (shoot == true and state == MODE_STATE.IDLE) {
 	var _angle = DIRS.UP;
 	if (mode == OPTION_MODE.LASER and (option_id == 3 or option_id == 4)) {
 		_angle = point_direction(x, y, option1.x, option1.y);

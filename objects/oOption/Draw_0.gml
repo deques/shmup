@@ -6,7 +6,7 @@ if (global.DEBUG == true) {
 }
 
 
-if (shoot_laser == true) {
+if (shoot_laser == true and state == MODE_STATE.IDLE) {
 	var endPoint, _end_x, _end_y;
 	var _shoot_laser = false;
 	
