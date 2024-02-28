@@ -2,7 +2,7 @@
 
 randomize();
 
-h_spd = 0.4;
+h_spd = 1.6;
 move_dir = 1;
 minMax = 60;
 step = 0;

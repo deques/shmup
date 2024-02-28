@@ -20,17 +20,17 @@ if (can_shoot) {
 		}*/
 		var bullet = instance_create_layer(x, y, global.layers.bullets, oBullet);
 		bullet.angle = angle * i + 10;
-		bullet.spd = 2;
+		bullet.spd = 8;
 		bullet.shot_from = self.id;
 			
 		var bullet = instance_create_layer(x, y, global.layers.bullets, oBullet);
 		bullet.angle = angle * i + 20;
-		bullet.spd = 2;
+		bullet.spd = 8;
 		bullet.shot_from = self.id
 		
 		var bullet = instance_create_layer(x, y, global.layers.bullets, oBullet);
 		bullet.angle = angle * i + 30;
-		bullet.spd = 2;
+		bullet.spd = 8;
 		bullet.shot_from = self.id;
 	}
 	can_shoot = false;

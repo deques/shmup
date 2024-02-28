@@ -12,22 +12,22 @@ if (mode == OPTION_MODE.STANDARD) {
 	image_angle = 0;
 	image_index = 0;
 	if (option_id == 1) {
-		var dist = 10;
+		var dist = 40;
 		_x = lengthdir_x(dist, DIRS.LEFT);
 		_y = lengthdir_y(dist, DIRS.LEFT);
 		
 	}	else if (option_id == 2) {
-		var dist = 10;
+		var dist = 40;
 		_x = lengthdir_x(dist, DIRS.RIGHT);
 		_y = lengthdir_y(dist, DIRS.RIGHT);
 		
 	} else if (option_id == 3) {
-		var dist = 20;
+		var dist = 80;
 		_x = lengthdir_x(dist, DIRS.RIGHT - 10);
 		_y = lengthdir_y(dist, DIRS.RIGHT - 10);
 		
 	} else if (option_id == 4) {
-		var dist = 20;
+		var dist = 80;
 		_x = lengthdir_x(dist, DIRS.LEFT + 10);
 		_y = lengthdir_y(dist, DIRS.LEFT + 10);
 		
@@ -38,7 +38,7 @@ if (mode == OPTION_MODE.STANDARD) {
 } else if (mode == OPTION_MODE.CIRCLE) {
 	image_index = 1;
 	shoot = false;
-	var dist = 20;
+	var dist = 80;
 	angle += 7;
 	for (var i = 0; i < 4; i++) {
 		_x = lengthdir_x(dist, angle);
@@ -51,19 +51,19 @@ if (mode == OPTION_MODE.STANDARD) {
 	shoot = false;
 	var dist;
 	if (option_id == 1) {
-		dist = 10;
+		dist = 40;
 		_x = lengthdir_x(dist, dir);
 		_y = lengthdir_y(dist, dir);
 	} else if (option_id == 2) {
-		dist = 20;
+		dist = 80;
 		_x = lengthdir_x(dist, dir);
 		_y = lengthdir_y(dist, dir);
 	} else if (option_id == 3) {
-		dist = 30;
+		dist = 120;
 		_x = lengthdir_x(dist, dir);
 		_y = lengthdir_y(dist, dir);
 	} else if (option_id == 4) {
-		dist = 40;
+		dist = 160;
 		_x = lengthdir_x(dist, dir);
 		_y = lengthdir_y(dist, dir);
 	}
@@ -82,21 +82,21 @@ if (mode == OPTION_MODE.STANDARD) {
 	var dist;
 	var option1 = global.options[| 0].id;
 	if (option_id == 1) {
-		dist = 35;
+		dist = 140;
 		_x = lengthdir_x(dist, 90)
 		_y = lengthdir_y(dist, 90)
 	} else if (option_id == 2) {
-		dist = 15;
+		dist = 60;
 		_x = lengthdir_x(dist, 90)
 		_y = lengthdir_y(dist, 90)
 	} else if (option_id == 3) {
-		dist = 20;
+		dist = 80;
 		_x = lengthdir_x(dist, 70)
 		_y = lengthdir_y(dist, 70)
 		
 		image_angle = point_direction(x, y, option1.x, option1.y) - 90;
 	} else if (option_id == 4) {
-		dist = 20;
+		dist = 80;
 		_x = lengthdir_x(dist, 110)
 		_y = lengthdir_y(dist, 110)
 		image_angle = point_direction(x, y, option1.x, option1.y) - 90;

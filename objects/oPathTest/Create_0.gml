@@ -8,7 +8,7 @@ dsPoints = ds_list_create();
 follow = false;
 
 pointPos = 0;
-spd = 2;
+spd = 8;
 
 xPos = -1;
 yPos = -1;

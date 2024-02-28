@@ -10,7 +10,7 @@ if (step >= minMax) {
 
 if (can_shoot == true) {
 	with(instance_create_layer(x, y, "Player", oMonsterBullet)) {
-			vSpd = 1;
+			vSpd = 4;
 	}
 	can_shoot = false;
 	alarm[0] = can_shoot_timer;

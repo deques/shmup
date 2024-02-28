@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-spd = 1;
+spd = 4;
 dir = DIRS.DOWN;
 shot_cooldown = 10;
 hp = 10;

@@ -6,7 +6,7 @@ scale = width / room_width;
 follow = false;
 
 pointPos = 0;
-spd = 2;
+spd = 8;
 
 xPos = x;
 yPos = y;

@@ -11,7 +11,7 @@ if (can_shoot) {
 	// Create four bullets at each direction
 	with (instance_create_layer(x, y, global.layers.bullets, oBullet)) {
 		angle = other.shoot_angle;
-		spd = 1.5;
+		spd = 6;
 		image_blend = c_dkgray;
 		shot_from = self.id;
 	}

@@ -10,7 +10,7 @@ if (can_shoot) {
 	for (var i = 0; i < num; i++) {
 		with (instance_create_layer(x, y, global.layers.bullets, oBullet)) {
 			angle = other.shoot_angle + (i * num_angle);
-			spd = 2;
+			spd = 8;
 			image_blend = c_yellow;
 			shot_from = self.id;
 		}

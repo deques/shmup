@@ -17,7 +17,7 @@ function create_bullets(_angle, _parent, _x_dist = 0, _y_dist = 0) {
 }
 
 function create_laser(_option_id, _start, _end) {
-	var _max = 900;
+	var _max = 2000;
 	var _angle = point_direction(_start.x, _start.y, _end[0], _end[1]);
 	var _dist = point_distance(_start.x, _start.y, _end[0], _end[1]);
 	
