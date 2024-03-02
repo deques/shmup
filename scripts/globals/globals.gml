@@ -1,4 +1,5 @@
 global.DEBUG = true;
+global.NOSHOT = true;
 
 global.dead_zone = 200;											// Enemies can't be hurt
 global.cease_fire_zone = room_height - 50;	// Enemies stop shooting 

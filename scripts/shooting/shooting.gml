@@ -35,6 +35,7 @@ function create_laser(_option_id, _start, _end) {
 	angle = point_direction(_start.x, _start.y, _end[0], _end[1]);
 	if (_option_id == 1) {
 		show_debug_message(angle - 90);
+		angle = 90;
 	}
 	//for (i = 0; i < laser_length ; i++) {
 		draw_sprite_ext(sLaser, 0, x, y, 1, 1 + lengthdir_y(laser_length, angle), angle - 90, c_white, 1);

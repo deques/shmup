@@ -1,8 +1,6 @@
 /// @description 
 image_index = 1;
 image_speed = 0;
-image_xscale = global.scale;
-image_yscale = global.scale;
 
 spd = 4;
 hsp = 0;

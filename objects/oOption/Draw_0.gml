@@ -16,7 +16,7 @@ if (shoot_laser == true and state == MODE_STATE.IDLE) {
 			_shoot_laser = true;
 			
 		_end_x = x;
-		_end_y = y - 900;
+		_end_y = y - 2000;
 		if (collision_point(_end_x, _end_y, oMonster, false, true)) {
 			_end_x = other.x;
 			_end_y = other.y;

@@ -1,7 +1,5 @@
 /// @description Monster movement
 
-image_xscale = global.scale;
-image_yscale = global.scale;
 image_speed = 0.1;
 spd = 0;
 
