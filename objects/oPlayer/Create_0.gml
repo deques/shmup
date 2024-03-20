@@ -8,10 +8,13 @@ vsp = 0;
 dir = 0;
 
 can_shoot = true;
-
 weapon_level = 1;
+option_mode = noone;
+global.options = ds_list_create();
 
-// Create options
+#region Create options
+/*
+// Create four options
 num_options = 4;
 
 option_mode = noone;
@@ -28,4 +31,5 @@ for (var i = 0; i < num_options; i++) {
 	}
 	
 	ds_list_add(global.options, option);
-}
+}*/
+#endregion

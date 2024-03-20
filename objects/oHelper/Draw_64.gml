@@ -41,15 +41,18 @@ if (global.DEBUG) {
 	draw_text(10, 120, "Bullet count: " + string(bullets));
 	
 	// Option mode
-	if (oPlayer.option_mode == OPTION_MODE.STANDARD) {
-		mode = "Standard";
-	} else if (oPlayer.option_mode == OPTION_MODE.CIRCLE) {
-		mode = "Circle";
-	} else if (oPlayer.option_mode == OPTION_MODE.SWORD) {
-		mode = "Sword";
-	} else if (oPlayer.option_mode == OPTION_MODE.LASER) {
-		mode = "Laser";
+	if (instance_exists(oPlayer)) {
+		if (oPlayer.option_mode == OPTION_MODE.STANDARD) {
+			mode = "Standard";
+		} else if (oPlayer.option_mode == OPTION_MODE.CIRCLE) {
+			mode = "Circle";
+		} else if (oPlayer.option_mode == OPTION_MODE.SWORD) {
+			mode = "Sword";
+		} else if (oPlayer.option_mode == OPTION_MODE.LASER) {
+			mode = "Laser";
+		} else {
+			mode = "null";	
+		}
+		draw_text(10, 140, "Option mode: " + mode);
 	}
-	
-	draw_text(10, 140, "Option mode: " + mode);
 }

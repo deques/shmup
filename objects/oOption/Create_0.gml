@@ -18,6 +18,8 @@ p2 = noone;
 
 laser_charge = false;
 laser_charge_time = 20;
+shoot_laser = false;
+
 sword_timer = 0;
 dir = 45;
 

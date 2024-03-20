@@ -13,6 +13,9 @@ if (_weapon_level != 0)
 	weapon_level += _weapon_level;
 
 function change_mode() {
+	if (!instance_exists(oOption))
+		return;
+		
 	//randomize();
 	//ds_list_shuffle(global.options)
 	for (var i = 0; i < ds_list_size(global.options); i++) {
@@ -51,31 +54,34 @@ y = clamp(y + vsp, 0 + 10, room_height - 10);
 #endregion
 
 #region Player actions
-// Reset laser
-oOption.shoot_laser = false;
 
-if (_shoot and can_shoot = true) {
-	_angle = DIRS.UP;
+if (instance_exists(oOption)) {
+	// Reset laser
+	oOption.shoot_laser = false;
+
+	if (_shoot and can_shoot = true) {
+		_angle = DIRS.UP;
 	
-	// Timer
-	if (option_mode = OPTION_MODE.STANDARD) {
-		alarm[0] = 10;
-		create_bullets(_angle, self.id);
-		oOption.shoot = true;
-		can_shoot = false
-	} else if (option_mode = OPTION_MODE.LASER) {
-		oOption.shoot_laser = true;
+		// Timer
+		if (option_mode = OPTION_MODE.STANDARD) {
+			alarm[0] = 10;
+			create_bullets(_angle, self.id);
+			oOption.shoot = true;
+			can_shoot = false
+		} else if (option_mode = OPTION_MODE.LASER) {
+			oOption.shoot_laser = true;
 		
-		with (global.options[| 0]) {
-			if (laser_charge == false) {
-				alarm[0] = laser_charge_time;	
-				laser_charge = true;
+			with (global.options[| 0]) {
+				if (laser_charge == false) {
+					alarm[0] = laser_charge_time;	
+					laser_charge = true;
+				}
 			}
 		}
+	} else if (_shoot == 0) {
+		// Reset Options
+		oOption.laser_charge = false;	
 	}
-} else if (_shoot == 0) {
-	// Reset Options
-	oOption.laser_charge = false;	
 }
 
 if (_mode_change) {	
