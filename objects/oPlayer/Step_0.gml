@@ -18,6 +18,7 @@ function change_mode() {
 		
 	//randomize();
 	//ds_list_shuffle(global.options)
+	oOption.shoot_laser = false;
 	for (var i = 0; i < ds_list_size(global.options); i++) {
 		option = global.options[| i];
 		option.option_id = (i + 1);
@@ -55,20 +56,23 @@ y = clamp(y + vsp, 0 + 10, room_height - 10);
 
 #region Player actions
 
-if (instance_exists(oOption)) {
 	// Reset laser
-	oOption.shoot_laser = false;
+	//oOption.shoot_laser = false;
 
-	if (_shoot and can_shoot = true) {
+if (_shoot and can_shoot = true) {
+	if (option_mode != OPTION_MODE.LASER and option_mode != OPTION_MODE.SWORD) {
 		_angle = DIRS.UP;
-	
 		// Timer
+		alarm[0] = 10;
+		create_bullets(_angle, self.id);
+		can_shoot = false
+	}
+	
+	if (instance_exists(oOption)) {
 		if (option_mode = OPTION_MODE.STANDARD) {
-			alarm[0] = 10;
-			create_bullets(_angle, self.id);
+			
 			oOption.shoot = true;
-			can_shoot = false
-		} else if (option_mode = OPTION_MODE.LASER) {
+		} else if (option_mode == OPTION_MODE.LASER) {
 			oOption.shoot_laser = true;
 		
 			with (global.options[| 0]) {
@@ -78,11 +82,16 @@ if (instance_exists(oOption)) {
 				}
 			}
 		}
-	} else if (_shoot == 0) {
-		// Reset Options
+	}
+} else if (_shoot == 0) {
+	// Reset Options
+	if (option_mode = OPTION_MODE.LASER) {
 		oOption.laser_charge = false;	
+		oOption.shoot_laser = false;
+		laser_charge = false;
 	}
 }
+
 
 if (_mode_change) {	
 	change_mode();
