@@ -15,6 +15,11 @@ global.options = ds_list_create();
 
 testing = false;
 
+// Add collision mask for options
+var mask = instance_create_layer(x, y, global.layers.player, oPlayerOption);
+mask.image_alpha = 0;
+mask.image_speed = 0;
+
 #region Create options
 if (testing == true) {
 	// Create four options
