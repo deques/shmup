@@ -5,33 +5,10 @@ var _up = keyboard_check(vk_up);
 var _down = keyboard_check(vk_down);
 var _shoot = keyboard_check(ord("X"));
 var _mode_change = keyboard_check_pressed(ord("C"));
-var _weapon_level = keyboard_check_pressed(ord("0")) - keyboard_check_pressed(ord("9"))
 var _move_h = _right - _left;
 var _move_v = _down - _up;
 
-if (_weapon_level != 0)
-	weapon_level += _weapon_level;
-
-function change_mode() {
-	if (!instance_exists(oOption))
-		return;
-		
-	//randomize();
-	//ds_list_shuffle(global.options)
-	oOption.shoot_laser = false;
-	for (var i = 0; i < ds_list_size(global.options); i++) {
-		option = global.options[| i];
-		option.option_id = (i + 1);
-	}
-	
-	oOption.mode++;
-	if (oOption.mode == OPTION_MODE.NUM)
-		oOption.mode = 0;
-	
-	oOption.state = MODE_STATE.CHANGE;
-	option_mode = oOption.mode;
-}
-
+// Reset movement
 hsp = 0;
 vsp = 0;
 
@@ -70,7 +47,6 @@ if (_shoot and can_shoot = true) {
 	
 	if (instance_exists(oOption)) {
 		if (option_mode = OPTION_MODE.STANDARD) {
-			
 			oOption.shoot = true;
 		} else if (option_mode == OPTION_MODE.LASER) {
 			oOption.shoot_laser = true;

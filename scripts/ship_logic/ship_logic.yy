@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"shooting",
+  "%Name":"ship_logic",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"shooting",
+  "name":"ship_logic",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

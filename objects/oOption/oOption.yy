@@ -12,8 +12,8 @@
   "name":"oOption",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player",
-    "path":"folders/Objects/Player.yy",
+    "name":"Option",
+    "path":"folders/Objects/Player/Option.yy",
   },
   "parentObjectId":null,
   "persistent":false,

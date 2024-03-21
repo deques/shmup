@@ -43,3 +43,24 @@ function create_laser(_option_id, _start, _end) {
 	//}
 	
 }
+
+// Change option mode
+function change_mode() {
+	if (!instance_exists(oOption))
+		return;
+		
+	//randomize();
+	//ds_list_shuffle(global.options)
+	oOption.shoot_laser = false;
+	for (var i = 0; i < ds_list_size(global.options); i++) {
+		option = global.options[| i];
+		option.option_id = (i + 1);
+	}
+	
+	oOption.mode++;
+	if (oOption.mode == OPTION_MODE.NUM)
+		oOption.mode = 0;
+	
+	oOption.state = MODE_STATE.CHANGE;
+	option_mode = oOption.mode;
+}

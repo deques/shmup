@@ -5,7 +5,7 @@ if (global.DEBUG == true) {
 	//draw_text(x - sprite_width / 2, y, option_id);
 }
 
-
+/*
 if (shoot_laser == true and state == MODE_STATE.IDLE) {
 	var endPoint, _end_x, _end_y;
 	var _shoot_laser = false;
@@ -34,4 +34,4 @@ if (shoot_laser == true and state == MODE_STATE.IDLE) {
 		
 	if (_shoot_laser == true)
 		create_laser(option_id, self, [_end_x, _end_y]);
-}
+}*/

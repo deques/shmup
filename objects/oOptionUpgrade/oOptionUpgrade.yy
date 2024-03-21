@@ -1,13 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oObjectTrail",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oOptionUpgrade",
+  "eventList":[],
   "managed":true,
-  "name":"oObjectTrail",
+  "name":"oOptionUpgrade",
   "overriddenProperties":[],
   "parent":{
     "name":"Option",
@@ -32,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sOption",
-    "path":"sprites/sOption/sOption.yy",
+    "name":"sOptionUpgrade",
+    "path":"sprites/sOptionUpgrade/sOptionUpgrade.yy",
   },
   "spriteMaskId":null,
   "visible":true,
