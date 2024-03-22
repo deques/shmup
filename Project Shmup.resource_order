@@ -1,7 +1,5 @@
 {
   "FolderOrderSettings":[
-    {"name":"Animation Curves","order":12,"path":"folders/Animation Curves.yy",},
-    {"name":"Extensions","order":14,"path":"folders/Extensions.yy",},
     {"name":"Fonts","order":7,"path":"folders/Fonts.yy",},
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Objects","order":9,"path":"folders/Objects.yy",},
@@ -16,7 +14,6 @@
     {"name":"Paths","order":4,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":10,"path":"folders/Rooms.yy",},
     {"name":"Scripts","order":5,"path":"folders/Scripts.yy",},
-    {"name":"Sequences","order":11,"path":"folders/Sequences.yy",},
     {"name":"Shaders","order":6,"path":"folders/Shaders.yy",},
     {"name":"Sounds","order":3,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
@@ -24,11 +21,9 @@
     {"name":"Player","order":14,"path":"folders/Sprites/Player.yy",},
     {"name":"Weapon","order":2,"path":"folders/Sprites/Player/Weapon.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
-    {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"oBeam","order":1,"path":"objects/oBeam/oBeam.yy",},
-    {"name":"oPlayerOption","order":7,"path":"objects/oPlayerOption/oPlayerOption.yy",},
     {"name":"oBlue","order":8,"path":"objects/oBlue/oBlue.yy",},
     {"name":"oBullet","order":5,"path":"objects/oBullet/oBullet.yy",},
     {"name":"oCoin","order":7,"path":"objects/oCoin/oCoin.yy",},
@@ -49,6 +44,7 @@
     {"name":"oPathObject","order":1,"path":"objects/oPathObject/oPathObject.yy",},
     {"name":"oPink","order":10,"path":"objects/oPink/oPink.yy",},
     {"name":"oPlayer","order":1,"path":"objects/oPlayer/oPlayer.yy",},
+    {"name":"oPlayerOption","order":7,"path":"objects/oPlayerOption/oPlayerOption.yy",},
     {"name":"oPoint","order":1,"path":"objects/oPoint/oPoint.yy",},
     {"name":"oRed","order":3,"path":"objects/oRed/oRed.yy",},
     {"name":"oYellow","order":9,"path":"objects/oYellow/oYellow.yy",},

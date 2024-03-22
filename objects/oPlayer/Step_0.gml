@@ -46,9 +46,9 @@ if (_shoot and can_shoot = true) {
 	}
 	
 	if (instance_exists(oOption)) {
-		if (option_mode = OPTION_MODE.STANDARD) {
+		if (option_mode = OPTION_MODE.STANDARD) {					// Standard mode
 			oOption.shoot = true;
-		} else if (option_mode == OPTION_MODE.LASER) {
+		} else if (option_mode == OPTION_MODE.LASER) {		// Laser mode
 			oOption.shoot_laser = true;
 		
 			with (global.options[| 0]) {
