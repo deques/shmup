@@ -24,6 +24,7 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"oAsteroid","order":12,"path":"objects/oAsteroid/oAsteroid.yy",},
     {"name":"oBlue","order":8,"path":"objects/oBlue/oBlue.yy",},
     {"name":"oBullet","order":5,"path":"objects/oBullet/oBullet.yy",},
     {"name":"oCoin","order":7,"path":"objects/oCoin/oCoin.yy",},
@@ -54,6 +55,7 @@
     {"name":"globals","order":2,"path":"scripts/globals/globals.yy",},
     {"name":"ship_logic","order":1,"path":"scripts/ship_logic/ship_logic.yy",},
     {"name":"pico8_invaders_sprites_LARGE","order":4,"path":"sprites/pico8_invaders_sprites_LARGE/pico8_invaders_sprites_LARGE.yy",},
+    {"name":"s_asteroid","order":15,"path":"sprites/s_asteroid/s_asteroid.yy",},
     {"name":"sBeam","order":1,"path":"sprites/sBeam/sBeam.yy",},
     {"name":"sBlue","order":7,"path":"sprites/sBlue/sBlue.yy",},
     {"name":"sCircle","order":3,"path":"sprites/sCircle/sCircle.yy",},
@@ -68,9 +70,9 @@
     {"name":"sPlayerOption","order":3,"path":"sprites/sPlayerOption/sPlayerOption.yy",},
     {"name":"sPoint","order":8,"path":"sprites/sPoint/sPoint.yy",},
     {"name":"spr_grid","order":10,"path":"sprites/spr_grid/spr_grid.yy",},
-    {"name":"s_asteroid","order":15,"path":"sprites/s_asteroid/s_asteroid.yy",},
     {"name":"sRed","order":2,"path":"sprites/sRed/sRed.yy",},
     {"name":"sSingleBeam","order":2,"path":"sprites/sSingleBeam/sSingleBeam.yy",},
+    {"name":"sWall","order":16,"path":"sprites/sWall/sWall.yy",},
     {"name":"sYellow","order":4,"path":"sprites/sYellow/sYellow.yy",},
   ],
 }

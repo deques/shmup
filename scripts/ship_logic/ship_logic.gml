@@ -19,15 +19,25 @@ function create_bullets(_angle, _parent, _x_dist = 0, _y_dist = 0) {
 function shoot_laser_beam() {
 	var endPoint, _end_x, _end_y;
 	var _shoot_laser = false;
+	var laser_length = 1000;
 	
 	if (!instance_exists(oLaser)) {
 		laser = instance_create_layer(x, y, global.layers.player, oLaser);
 		laser.parent = self;
-		laser.image_yscale = 1000;
+		laser.image_yscale = laser_length ;
 	}
 	
 	laser.x = x;
 	laser.y = y;
+	
+	// Check laser collision
+	for (var i = 0; i < laser_length; i++) {
+		if (collision_point(x, y + i, oAsteroid, false, true)) {
+			laser.image_yscale = i;
+		}
+	}
+	
+	
 	/*if (option_id == 1) {
 		// First Option charges the laser beam
 		if (alarm[0] < 0)

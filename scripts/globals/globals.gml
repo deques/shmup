@@ -7,3 +7,15 @@ global.cease_fire_zone = room_height - 50;	// Enemies stop shooting
 global.timer = 1 / room_speed;
 
 global.scale = 4;
+
+global.layers = {
+	player	:	"Player",
+	enemy		:	"Enemy",
+	bullets :	"Bullets",
+	stage		:	"Stage"
+}
+
+global.laser_collide = [
+	oMonster,
+	oAsteroid
+]

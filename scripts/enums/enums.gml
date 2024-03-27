@@ -12,13 +12,6 @@ enum DIRS {
 	DOWN = 270
 }
 
-
-global.layers = {
-	player :	"Player",
-	enemy :		"Enemy",
-	bullets :	"Bullets"
-}
-
 enum OPTION_MODE {
 	STANDARD,
 	CIRCLE,
