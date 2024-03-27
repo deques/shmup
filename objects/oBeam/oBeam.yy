@@ -12,8 +12,8 @@
   "name":"oBeam",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Weapon",
+    "path":"folders/Objects/Player/Weapon.yy",
   },
   "parentObjectId":null,
   "persistent":false,

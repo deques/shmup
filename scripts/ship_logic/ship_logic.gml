@@ -16,43 +16,53 @@ function create_bullets(_angle, _parent, _x_dist = 0, _y_dist = 0) {
 	}
 }
 
-
 function shoot_laser_beam() {
-	if (shoot_laser == true and state == MODE_STATE.IDLE) {
-		var endPoint, _end_x, _end_y;
-		var _shoot_laser = false;
+	var endPoint, _end_x, _end_y;
+	var _shoot_laser = false;
 	
-		if (option_id == 1) {
-				
-			if (alarm[0] < 0)
-				_shoot_laser = true;
-			
-			_end_x = x;
-			_end_y = y - 2000;
-			if (collision_point(_end_x, _end_y, oMonster, false, true)) {
-				_end_x = other.x;
-				_end_y = other.y;
-			}
-		
-		} else if (option_id == 2 or option_id == 3 or option_id == 4) {
-			_shoot_laser = true;
-			endPoint = global.options[| 0].id;
-			_end_x = endPoint.x;
-			_end_y = endPoint.y;
-		}
-	
-		if (option_id == 1 and _shoot_laser == true)
-			option_id = 1;
-		
-		if (_shoot_laser == true)
-			create_laser(option_id, self, [_end_x, _end_y]);
+	if (!instance_exists(oLaser)) {
+		laser = instance_create_layer(x, y, global.layers.player, oLaser);
+		laser.parent = self;
+		laser.image_yscale = 1000;
 	}
+	
+	laser.x = x;
+	laser.y = y;
+	/*if (option_id == 1) {
+		// First Option charges the laser beam
+		if (alarm[0] < 0)
+			_shoot_laser = true;		// Shoot the laser beam
+			
+		_end_x = x;
+		_end_y = y - 2000;
+			
+		// Shoot on enemies
+		if (collision_point(_end_x, _end_y, oMonster, false, true)) {
+			_end_x = other.x;
+			_end_y = other.y;
+		}
+		
+	} else if (option_id == 2 or option_id == 3 or option_id == 4) {
+		// Option 2, 3 and 4 beams at the first option
+		_shoot_laser = true;
+		endPoint = global.options[| 0].id;
+		_end_x = endPoint.x;
+		_end_y = endPoint.y;
+	}
+	_shoot_laser = true;
+	if (_shoot_laser == true)
+		create_laser(option_id, self, [_end_x, _end_y]);
+	*/
+	
 }
 
 function create_laser(_option_id, _start, _end) {
 	var _max = 2000;
 	var _angle = point_direction(_start.x, _start.y, _end[0], _end[1]);
 	var _dist = point_distance(_start.x, _start.y, _end[0], _end[1]);
+	
+	laser = instance_create_layer(x, y, global.layers.player, oLaser);
+	
 	
 	if (_option_id == 1) {
 		draw_set_color(c_aqua);
@@ -63,18 +73,11 @@ function create_laser(_option_id, _start, _end) {
 		}
 	}
 	
-	
 	laser_length = point_distance(_start.x, _start.y, _end[0], _end[1]);
 	angle = point_direction(_start.x, _start.y, _end[0], _end[1]);
 	if (_option_id == 1) {
-		show_debug_message(angle - 90);
 		angle = 90;
 	}
-	//for (i = 0; i < laser_length ; i++) {
-		draw_sprite_ext(sLaser, 0, x, y, 1, 1 + lengthdir_y(laser_length, angle), angle - 90, c_white, 1);
-		draw_self();
-	//}
-	
 }
 
 // Change option mode

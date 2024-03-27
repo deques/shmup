@@ -137,15 +137,31 @@ if (state == MODE_STATE.IDLE) {
 
 #region Shoot bullets
 if (shoot == true and state == MODE_STATE.IDLE) {
-	var _angle = DIRS.UP;
-	if (mode == OPTION_MODE.LASER and (option_id == 3 or option_id == 4)) {
-		_angle = point_direction(x, y, option1.x, option1.y);
-		var _mirror_angle = 90 + (90 - _angle);
-		_angle = _mirror_angle;
+	if (mode == OPTION_MODE.STANDARD or mode == OPTION_MODE.CIRCLE) {
+		var _angle = DIRS.UP;
+		create_bullets(_angle, self.id);
+		shoot = false;
+	} else if (mode == OPTION_MODE.LASER) {
+		
+		var _angle = DIRS.UP;
+		if ((option_id == 3 or option_id == 4)) {
+			_angle = point_direction(x, y, option1.x, option1.y);
+			var _mirror_angle = 90 + (90 - _angle);
+			_angle = _mirror_angle;
+		}
+		
+		shoot_laser_beam();
 	}
-	create_bullets(_angle, self.id);
-	shoot = false;
+} else if (shoot == false and state == MODE_STATE.IDLE) {
+	// Remove laser when not shooting
+	if (mode == OPTION_MODE.LASER) {
+		if (instance_exists(oLaser)) {
+			instance_destroy(oLaser);	
+		}
+	}
+	
 }
+
 #endregion
 
 #region Create trail

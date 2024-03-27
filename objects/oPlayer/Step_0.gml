@@ -49,8 +49,9 @@ if (_shoot and can_shoot = true) {
 		if (option_mode = OPTION_MODE.STANDARD) {					// Standard mode
 			oOption.shoot = true;
 		} else if (option_mode == OPTION_MODE.LASER) {		// Laser mode
-			oOption.shoot_laser = true;
-		
+			oOption.shoot = true;
+			
+			// The first option charges first then shoot
 			with (global.options[| 0]) {
 				if (laser_charge == false) {
 					alarm[0] = laser_charge_time;	
@@ -63,7 +64,7 @@ if (_shoot and can_shoot = true) {
 	// Reset Options
 	if (option_mode = OPTION_MODE.LASER) {
 		oOption.laser_charge = false;	
-		oOption.shoot_laser = false;
+		oOption.shoot = false;
 		laser_charge = false;
 	}
 }
