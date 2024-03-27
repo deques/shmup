@@ -29,13 +29,17 @@ function shoot_laser_beam() {
 	
 	laser.x = x;
 	laser.y = y;
-	
+	laser_collide = false;
 	// Check laser collision
 	for (var i = 0; i < laser_length; i++) {
-		if (collision_point(x, y + i, oAsteroid, false, true)) {
+		if (collision_point(x, y - i, oAsteroid, false, true)) {
+			laser_collide = true;
 			laser.image_yscale = i;
 		}
 	}
+	
+	if (laser_collide == false)
+		laser.image_yscale = laser_length;
 	
 	
 	/*if (option_id == 1) {
