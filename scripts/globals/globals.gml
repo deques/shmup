@@ -17,5 +17,6 @@ global.layers = {
 
 global.laser_collide = [
 	oMonster,
-	oAsteroid
+	oAsteroid,
+	oWall,
 ]

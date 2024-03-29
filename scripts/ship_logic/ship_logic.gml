@@ -32,9 +32,10 @@ function shoot_laser_beam() {
 	laser_collide = false;
 	// Check laser collision
 	for (var i = 0; i < laser_length; i++) {
-		if (collision_point(x, y - i, oAsteroid, false, true)) {
+		if (collision_point(x, y - i, global.laser_collide, false, true)) {
 			laser_collide = true;
 			laser.image_yscale = i;
+			break;
 		}
 	}
 	

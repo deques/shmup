@@ -42,9 +42,10 @@
   },
   "name":"Project Shmup",
   "resources":[
+    {"id":{"name":"oAsteroid","path":"objects/oAsteroid/oAsteroid.yy",},},
     {"id":{"name":"oBeam","path":"objects/oBeam/oBeam.yy",},},
     {"id":{"name":"oBezier","path":"objects/oBezier/oBezier.yy",},},
-    {"id":{"name":"oAsteroid","path":"objects/oAsteroid/oAsteroid.yy",},},
+    {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"oBlue","path":"objects/oBlue/oBlue.yy",},},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},},
     {"id":{"name":"oCoin","path":"objects/oCoin/oCoin.yy",},},

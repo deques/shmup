@@ -25,6 +25,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"oAsteroid","order":12,"path":"objects/oAsteroid/oAsteroid.yy",},
+    {"name":"oWall","order":13,"path":"objects/oWall/oWall.yy",},
     {"name":"oBlue","order":8,"path":"objects/oBlue/oBlue.yy",},
     {"name":"oBullet","order":5,"path":"objects/oBullet/oBullet.yy",},
     {"name":"oCoin","order":7,"path":"objects/oCoin/oCoin.yy",},
