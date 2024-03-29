@@ -35,7 +35,8 @@ if (mode == OPTION_MODE.STANDARD) {
 	
 	option_speed = 0.9;
 	
-} else if (mode == OPTION_MODE.CIRCLE) {
+} 
+else if (mode == OPTION_MODE.CIRCLE) {
 	image_index = 1;
 	shoot = false;
 	var dist = 80;
@@ -46,7 +47,8 @@ if (mode == OPTION_MODE.STANDARD) {
 		
 		
 		option_speed = 1.8;
-} else if (mode == OPTION_MODE.SWORD) {
+} 
+else if (mode == OPTION_MODE.SWORD) {
 	image_index = 1;
 	shoot = false;
 	var dist;
@@ -68,7 +70,7 @@ if (mode == OPTION_MODE.STANDARD) {
 		_y = lengthdir_y(dist, dir);
 	}
 	sword_timer += state_change_time;
-		option_speed = 0.2;
+	option_speed = 0.2;
 	
 	if (sword_timer >= 1) {
 		if (dir == 45)
@@ -78,8 +80,10 @@ if (mode == OPTION_MODE.STANDARD) {
 		
 		sword_timer = 0;
 	}
-} else if (mode == OPTION_MODE.LASER) {
+}
+else if (mode == OPTION_MODE.LASER) {
 	image_index = 0;
+	option_speed = 0.2;
 	var dist;
 	var option1 = global.options[| 0].id;
 	if (option_id == 1) {
@@ -137,26 +141,29 @@ if (state == MODE_STATE.IDLE) {
 
 #region Shoot bullets
 if (shoot == true and state == MODE_STATE.IDLE) {
-	if (mode == OPTION_MODE.STANDARD or mode == OPTION_MODE.CIRCLE) {
+	if (mode == OPTION_MODE.STANDARD or mode == OPTION_MODE.CIRCLE) {			// Normal bullets
 		var _angle = DIRS.UP;
 		create_bullets(_angle, self.id);
 		shoot = false;
-	} else if (mode == OPTION_MODE.LASER) {
-		
+	} 
+	else if (mode == OPTION_MODE.LASER) {																	// Laser beam
+		// Set angle
 		var _angle = DIRS.UP;
+		
+		// Option 3 and 4 beams to Option 1
 		if ((option_id == 3 or option_id == 4)) {
 			_angle = point_direction(x, y, option1.x, option1.y);
-			var _mirror_angle = 90 + (90 - _angle);
-			_angle = _mirror_angle;
 		}
 		
-		shoot_laser_beam();
+		//if (shoot_laser == true)
+			shoot_laser_beam(_angle);
 	}
 } else if (shoot == false and state == MODE_STATE.IDLE) {
 	// Remove laser when not shooting
 	if (mode == OPTION_MODE.LASER) {
-		if (instance_exists(oLaser)) {
-			instance_destroy(oLaser);	
+		if (instance_exists(laser)) {
+			instance_destroy(laser);	
+			laser = noone;
 		}
 	}
 	

@@ -6,6 +6,7 @@ option_id = noone;
 mode = noone;
 
 angle = 0;
+option_speed = 0;
 
 shoot = false;
 
@@ -18,8 +19,8 @@ p2 = noone;
 
 laser_charge = false;
 laser_charge_time = 20;
-shoot_laser = false;
-laser = noone;
+shoot_laser = true;
+laser = noone;				// Laser object
 
 sword_timer = 0;
 dir = 45;

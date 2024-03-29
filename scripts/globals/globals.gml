@@ -19,4 +19,5 @@ global.laser_collide = [
 	oMonster,
 	oAsteroid,
 	oWall,
+	oOption,
 ]
