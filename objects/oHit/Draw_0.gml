@@ -9,3 +9,5 @@ if (flashTimer > 0) {
 	
 	shader_reset();
 }
+
+draw_text(x + 10, y + 10, string(hp));

@@ -1,21 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oLaser",
+  "%Name":"oDamage",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"oHit","path":"objects/oHit/oHit.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oLaser",
+  "name":"oDamage",
   "overriddenProperties":[],
   "parent":{
     "name":"Weapon",
     "path":"folders/Objects/Player/Weapon.yy",
   },
-  "parentObjectId":{
-    "name":"oDamage",
-    "path":"objects/oDamage/oDamage.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sLaser",
-    "path":"sprites/sLaser/sLaser.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
