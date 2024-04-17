@@ -19,7 +19,8 @@ function create_bullets(_angle, _parent, _x_dist = 0, _y_dist = 0) {
 function shoot_laser_beam(_angle) {
 	var endPoint, _end_x, _end_y;
 	var _shoot_laser = false;
-	var laser_length = 1000;
+	var _max_laser_length = 1000;
+	var _laser_length = 0;
 	
 	
 	if (option_id == 1) {
@@ -30,7 +31,7 @@ function shoot_laser_beam(_angle) {
 	if (laser == noone) {
 		laser = instance_create_layer(x, y, global.layers.player, oLaser);
 		laser.parent = self;
-		laser.image_yscale = laser_length;
+		laser.image_yscale = _max_laser_length;
 		laser.image_angle = _angle - 90;
 		
 		if (option_id == 1)
@@ -40,19 +41,31 @@ function shoot_laser_beam(_angle) {
 	laser.x = x;
 	laser.y = y;
 	laser_collide = false;
+	
 	// Check laser collision
-	for (var i = 0; i < laser_length; i++) {
+	for (var i = 0; i < _max_laser_length; i++) {
 		var _xx = lengthdir_x(i, _angle);
 		var _yy = lengthdir_y(i, _angle);
 		if (collision_point(x + _xx, y + _yy, global.laser_collide, false, true)) {
 			laser_collide = true;
-			laser.image_yscale = i;
+			_laser_length = i;
+			laser.image_yscale = _laser_length;
 			break;
 		}
 	}
 	
 	if (laser_collide == false)
-		laser.image_yscale = laser_length;
+		laser.image_yscale = _max_laser_length;
+		
+	// Check if hitting any object
+	//test = collision_line(x, y, x, y - _laser_length, global.laser_hit, false, true);
+	/*with (collision_line(x, y, x, y - _laser_length, global.laser_hit, false, true)) {
+		if (hit_cooldown == false) {
+			alarm[0] = hit_cooldown_timer;
+			hp--;
+		}
+		show_debug_message("HIT");	
+	}*/
 }
 
 // Change option mode

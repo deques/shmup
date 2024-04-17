@@ -42,11 +42,10 @@ else if (mode == OPTION_MODE.CIRCLE) {
 	var dist = 80;
 	angle += 7;
 	
-		_x = lengthdir_x(dist, angle);
-		_y = lengthdir_y(dist, angle);
-		
-		
-		option_speed = 1.8;
+	_x = lengthdir_x(dist, angle);
+	_y = lengthdir_y(dist, angle);
+	
+	option_speed = 1.8;
 } 
 else if (mode == OPTION_MODE.SWORD) {
 	image_index = 1;
@@ -117,7 +116,9 @@ if (state == MODE_STATE.IDLE) {
 } else if (state == MODE_STATE.CHANGE) {
 	
 	if (mode == OPTION_MODE.CIRCLE) {
-		angle = option_id * 90;
+		var _num = ds_list_size(global.options)
+		var _space = 360 / _num;
+		angle = option_id * _space;
 	}
 	
 	p0 = [x, y];

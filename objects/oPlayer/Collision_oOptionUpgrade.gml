@@ -10,4 +10,7 @@ option.parent = self;
 option.option_id = (num + 1);
 option.mode = option_mode;
 
+if (oOption.mode = OPTION_MODE.CIRCLE)
+	oOption.state = MODE_STATE.CHANGE;
+
 ds_list_add(global.options, option);
