@@ -155,7 +155,18 @@ if (shoot == true and state == MODE_STATE.IDLE) {
 			_angle = point_direction(x, y, option1.x, option1.y);
 		}
 		
-		//if (shoot_laser == true)
+		if (option_id == 1) {
+			// Charge laser
+			if (alarm[0] <= laser_charge_time and laser_charge == false) {
+				alarm[0] = laser_charge_time;
+				laser_charge = true;
+			}
+		} else {
+			// Option 2, 3 and 4 don't charge
+			shoot_laser = true;
+		}
+		
+		if (shoot_laser == true)
 			shoot_laser_beam(_angle);
 	}
 } else if (shoot == false and state == MODE_STATE.IDLE) {
@@ -164,6 +175,8 @@ if (shoot == true and state == MODE_STATE.IDLE) {
 		if (instance_exists(laser)) {
 			instance_destroy(laser);	
 			laser = noone;
+			laser_charge = false;
+			shoot_laser = false;
 		}
 	}
 	

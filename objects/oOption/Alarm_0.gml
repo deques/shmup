@@ -1,4 +1,4 @@
 /// @description 
 
-//if (option_id == 1)
-//	_shoot_laser = true;
+if (option_id == 1)
+	shoot_laser = true;
