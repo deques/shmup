@@ -1,5 +1,8 @@
 /// @description 
 
+// Inherit the parent event
+event_inherited();
+
 if (parent == noone)
 	parent = self;
 
@@ -18,7 +21,7 @@ if (hp <= 0) {
 	can_shoot = false;
 	shot_cooldown = 0;
 	
-	instance_destroy();
+	//instance_destroy();
 	with (oBullet) {
 		if (shot_from == other.id) {
 			instance_create_layer(x, y, "Bullets", oCoin);
@@ -26,7 +29,7 @@ if (hp <= 0) {
 		}
 	}
 }
-
+/*
 // Getting hit
 if (hit == true) {
 	iFrame -= global.timer;
@@ -35,7 +38,7 @@ if (hit == true) {
 	if (iFrame <= 0) {
 		hit = false;	
 	}
-}
+}*/
 #endregion
 
 // Only start shooting when visible
