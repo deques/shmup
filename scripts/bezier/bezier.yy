@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"bezier",
   "isCompatibility":false,
   "isDnD":false,

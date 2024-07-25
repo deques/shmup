@@ -25,3 +25,8 @@ global.laser_hit = [
 	oMonster,
 	oAsteroid
 ]
+
+global.bullet_hit = [
+	oHit,
+	oWall
+]

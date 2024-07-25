@@ -2,5 +2,5 @@
 
 // Inherit the parent event
 event_inherited();
-
-instance_destroy();
+//instance_create_layer(x, y, layer_name, oBulletExplosionBlue);
+//instance_destroy();

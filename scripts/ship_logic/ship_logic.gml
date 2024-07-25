@@ -2,6 +2,7 @@
 function create_bullets(_angle, _parent, _x_dist = 0, _y_dist = 0) {
 	with (instance_create_layer(x - _x_dist, y + _y_dist, "Player", oBeam))	{
 		dir = _angle;
+		layer_name = "Player";
 		
 		if (object_get_name(_parent.object_index) == "oOption") {
 			if (other.mode == OPTION_MODE.LASER) {
