@@ -42,7 +42,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"Project Shmup",
   "resources":[
@@ -60,6 +60,7 @@
     {"id":{"name":"oGreen","path":"objects/oGreen/oGreen.yy",},},
     {"id":{"name":"oHelper","path":"objects/oHelper/oHelper.yy",},},
     {"id":{"name":"oHit","path":"objects/oHit/oHit.yy",},},
+    {"id":{"name":"oInput","path":"objects/oInput/oInput.yy",},},
     {"id":{"name":"oLaser","path":"objects/oLaser/oLaser.yy",},},
     {"id":{"name":"oMonster","path":"objects/oMonster/oMonster.yy",},},
     {"id":{"name":"oMonster1","path":"objects/oMonster1/oMonster1.yy",},},
@@ -86,6 +87,7 @@
     {"id":{"name":"rmStage1","path":"rooms/rmStage1/rmStage1.yy",},},
     {"id":{"name":"bezier","path":"scripts/bezier/bezier.yy",},},
     {"id":{"name":"enums","path":"scripts/enums/enums.yy",},},
+    {"id":{"name":"gamepad_vars","path":"scripts/gamepad_vars/gamepad_vars.yy",},},
     {"id":{"name":"globals","path":"scripts/globals/globals.yy",},},
     {"id":{"name":"ship_logic","path":"scripts/ship_logic/ship_logic.yy",},},
     {"id":{"name":"shFlash","path":"shaders/shFlash/shFlash.yy",},},
