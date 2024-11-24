@@ -15,4 +15,9 @@ switch (async_load[? "event_type"])
 		}
 	break;
 }
-	
+
+if (array_length(global.gamepads) > 0) {
+	global.gamepad_main = global.gamepads[0];	
+} else {
+	global.gamepad_main = undefined;
+}
