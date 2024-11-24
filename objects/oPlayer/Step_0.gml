@@ -1,4 +1,6 @@
 /// @description 
+
+// Keyboard
 var _left = keyboard_check(vk_left);
 var _right = keyboard_check(vk_right);
 var _up = keyboard_check(vk_up);
@@ -7,6 +9,17 @@ var _shoot = keyboard_check(ord("X"));
 var _mode_change = keyboard_check_pressed(ord("C"));
 var _move_h = _right - _left;
 var _move_v = _down - _up;
+
+// Gamepad
+var _gp = global.gamepad_main;
+if (_gp != undefined) {
+	_move_h = gamepad_button_check(_gp, gp_padr) - gamepad_button_check(_gp, gp_padl);
+	_move_h += gamepad_axis_value(_gp, gp_axislh);
+	_move_v = gamepad_button_check(_gp, gp_padd) - gamepad_button_check(_gp, gp_padu);
+	_move_v += gamepad_axis_value(_gp, gp_axislv);
+	_shoot = gamepad_button_check(_gp, gp_face1);
+	_mode_change = gamepad_button_check_pressed(_gp, gp_face3);
+}
 
 // Reset movement
 hsp = 0;
